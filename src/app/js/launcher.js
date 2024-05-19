@@ -166,7 +166,7 @@ async function loadServers() {
 	serverstatus.classList.add("checking");
 
 	try {
-		let host = "northstar.tf";
+		let host = "nscn.wolf109909.top";
 		let path = "/client/servers";
 
 		// ask the masterserver for the list of servers, if this has

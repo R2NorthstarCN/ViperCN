@@ -333,6 +333,7 @@ packages.download = async (url, name) => {
 	return new Promise((resolve) => {
 		// download mod to a temporary location
 		https.get(url, (res) => {
+			console.info(url)
 			let tmp = path.join(app.getPath("userData"), "Temp");
 
 			let zip_name = name || "package";

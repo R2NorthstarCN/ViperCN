@@ -24,7 +24,7 @@ async function github_releases(repo) {
 	// attempt to perform the request, while caching it
 	try {
 		request = JSON.parse(await requests.get(
-			"api.github.com", `/repos/${repo}/releases`,
+			"gitee.com", `/api/v5/repos/${repo}/releases`,
 			"release-notes-" + repo
 		))
 	}catch(err) {
@@ -48,7 +48,7 @@ releases.notes.viper = async () => {
 
 // returns release notes for Northstar
 releases.notes.northstar = async () => {
-	return await github_releases("R2Northstar/Northstar");
+	return await github_releases("R2NorthstarCN/R2NorthstarCN_Launcher");
 }
 
 // gets and returns some details of the latest release of a GitHub repo
@@ -58,7 +58,7 @@ async function github_latest(repo) {
 	// attempt to perform the request, while caching it
 	try {
 		request = JSON.parse(await requests.get(
-			"api.github.com", `/repos/${repo}/releases/latest`,
+			"gitee.com", `/api/v5/repos/${repo}/releases/latest`,
 			"latest-release-" + repo
 		))
 	}catch(err) {
@@ -86,7 +86,7 @@ releases.latest.viper = async () => {
 
 // returns latest release for Northstar
 releases.latest.northstar = async () => {
-	return await github_latest("R2Northstar/Northstar");
+	return await github_latest("R2NorthstarCN/R2NorthstarCN_Launcher");
 }
 
 module.exports = releases;
