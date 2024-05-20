@@ -59,7 +59,7 @@
 	border: none;
 	outline: none;
 	transition: filter 0.15s ease-in-out;
-	width: calc(100% - var(--spacing) * 2);
+	width: calc(80% - var(--spacing) * 2);
 }
 
 .popup .search:focus, 

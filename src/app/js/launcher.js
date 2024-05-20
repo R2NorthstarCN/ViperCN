@@ -25,9 +25,9 @@ function page(page) {
 
 function formatRelease(notes) {
 	if (! notes) {return ""}
-
+	
 	let content = "";
-
+	notes.reverse();
 	if (notes.length === 1) {
 		content = notes[0];
 	} else {
@@ -35,7 +35,7 @@ function formatRelease(notes) {
 			if (release.prerelease) {continue}
 			let new_content = 
 				// release date
-				new Date(release.published_at).toLocaleString() +
+				new Date(release.created_at).toLocaleString() +
 				"\n" +
 
 				// release name
